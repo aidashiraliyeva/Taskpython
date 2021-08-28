@@ -4,42 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
-    <title>Document</title>
+    <title>Oxu.az</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <table class="table ">
-                    <thead>
-                        <tr>
-                            <th scope="col">Book Name</th>
-                            <th scope="col">Author</th>
-                            <th scope="col">Year</th>
-                            <th scope="col">Number</th>
-                            <th scope="col">Summary</th>
-                            <th scope="col">Delete</th>
-                            <th scope="col">Update</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for book in Books %}
-                        <tr>
-                            <td>{{book.Name}}</td>
-                            <td>{{book.Author}}</td>
-                            <td>{{book.Year}}</td>
-                            <td>{{book.Number}}</td>
-                            <td>{{book.Summary}}</td>
-                            <td><button><a href="/delete/{{book.id}}">Delete</a></button></td>
-                            <td><button><a href="/update/{{book.id}}">Update</a></button></td>
-                        </tr>
-                        {% endfor %}
 
-                    </tbody>
-                </table>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Ana səhifə</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('create')}}">Xəbər Əlavə et</a>
+              </li>
+        
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('post')}}">Xəbər Detalları Əlavə et</a>
+            </li>
+
+       
         </div>
-    </div>
-</body>
-</html>
+      </nav>
+
+    </body>
+    </html>

@@ -4,22 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
-    <title>Document</title>
+    <title>xəbər</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-       <div class="row">
-           <div class="col-12">
-               {%  for book in Books %}
-                <p>Name: {{book.Name}}</p>
-                <p>Author: {{book['Author']}}</p>
-                <p>Year: {{book['Year']}}</p>
-                <button><a href="/single/{{book.id}}">See More</a></button>
-                <hr>
-               {% endfor %}
-           </div>
-       </div> 
-    </div>
+<hr>
+   <h3 class="text-center" >Xəbər</h3>
+<hr>
+
+
+    
+   
+    {%for post in posts %}
+    {{post.details|safe}}
+
+
+        {%endfor%}
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

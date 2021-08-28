@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Oxu.az</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+
+    <hr>
+    <h3  class="text-center" > Xəbərlər</h3>
+<hr>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+           {% for new in news %}
+           <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img src="../static/uploads/{{new.news_img}}">
+              <div class="card-body">
+                <p class="card-text">{{new.news_heading}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  <a href="{{url_for('show')}}"><button type="button" class="btn btn-sm btn-outline-secondary">Ətraflı oxu</button></a>  
+                  </div>
+                  <small class="text-muted">{{new.news_date}}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+           {% endfor %}
+
+       
     
+          
+         
+        
+ 
 </body>
 </html>
